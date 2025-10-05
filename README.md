@@ -161,13 +161,6 @@ Buzzer → Arduino Uno
 - **Fail**: Number of failed intervals (max 2)
 - **Result**: Final score upon completion
 
-### Test Logic Flow
-```
-Start → Countdown → Round 1 → ... → Round 7 → Success
-  ↓                    ↓              ↓
-Reset ← Fail (2x) ← Timeout ← Distance Check
-```
-
 ### Timing System
 - Each round has progressively shorter intervals
 - Ultrasonic sensor detects participant position
