@@ -12,9 +12,7 @@
 - [Hardware Requirements](#-hardware-requirements)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [System Architecture](#-system-architecture)
 - [Project Structure](#-project-structure)
-- [Assets Gallery](#-assets-gallery)
 - [Contributing](#-contributing)
 - [License](#-license)
 - [Acknowledgments](#-acknowledgments)
@@ -23,8 +21,13 @@
 
 The Pacer System is an innovative Arduino-based fitness assessment tool designed to evaluate aerobic endurance using low-cost microcontrollers. This system implements a digital version of the Progressive Aerobic Cardiovascular Endurance Run (PACER) test, providing real-time feedback and automated scoring for fitness assessments.
 
-![Pacer System Project Poster](assets/poster.png)
-*Complete project overview and system architecture*
+<p align="center">
+  <img src = assets/poster.png width="75%">
+</p>
+
+<p align="center">
+  *Complete project overview and system architecture*
+</p>
 
 The system uses ultrasonic sensors to detect participant movement, an LCD display for real-time feedback, and audio cues to guide the testing process. It's designed for educational institutions, fitness centers, and research applications where cost-effective fitness assessment tools are needed.
 
@@ -47,44 +50,6 @@ The system uses ultrasonic sensors to detect participant movement, an LCD displa
 #### Complete Materials Overview
 ![All Required Materials](assets/Materials.png)
 *Complete set of components needed for the Pacer System*
-
-#### Individual Components
-
-**Arduino Microcontroller**
-![Arduino Microcontroller](assets/Arduino_MC.png)
-- **Arduino Uno/Nano** (or compatible microcontroller)
-- Main processing unit for the system
-
-**HC-SR04 Ultrasonic Sensor**
-![Ultrasonic Sensor](assets/Ultrasonic_Sensor.png)
-- **HC-SR04 Ultrasonic Sensor** - Distance measurement
-- Detects participant movement and position
-
-**16x2 I2C LCD Display**
-![LCD Display](assets/LCD_Display.png)
-- **16x2 I2C LCD Display** - Real-time feedback
-- Shows countdown, status, and results
-
-**Additional Components**
-- **Push Button** - System control and reset
-- **Buzzer** - Audio feedback
-- **Jumper Wires** - Connections
-- **Breadboard** - Prototyping (optional)
-
-### Pin Configuration
-```
-Ultrasonic Sensor:
-- Trigger Pin: Digital Pin 13
-- Echo Pin: Digital Pin 12
-
-LCD Display (I2C):
-- SDA: A4 (Arduino Uno)
-- SCL: A5 (Arduino Uno)
-- Address: 0x27
-
-Button: Digital Pin 2 (with internal pull-up)
-Buzzer: Digital Pin 8
-```
 
 ### 🔌 Wiring Diagram & Connection Guide
 
@@ -126,10 +91,6 @@ Buzzer → Arduino Uno
 └── Negative (-) → GND
 ```
 
-#### Complete System Overview
-![Complete Materials Setup](assets/Materials.png)
-*All components properly connected and ready for operation*
-
 #### Connection Verification Checklist
 - [ ] All power connections (VCC to 5V, GND to GND)
 - [ ] Ultrasonic sensor trigger and echo pins
@@ -155,50 +116,6 @@ Buzzer → Arduino Uno
 ### Hardware Setup
 
 > 💡 **Tip**: Refer to the [Wiring Diagram & Connection Guide](#-wiring-diagram--connection-guide) section above for detailed visual instructions.
-
-#### Component Assembly Guide
-
-**1. Prepare Your Arduino**
-![Arduino Setup](assets/Arduino_MC.png)
-- Ensure Arduino is disconnected from power
-- Have all components ready as shown in the [materials overview](assets/Materials.png)
-
-**2. Connect the Ultrasonic Sensor**
-![Ultrasonic Sensor](assets/Ultrasonic_Sensor.png)
-```
-HC-SR04 Connections:
-├── VCC (Power) → Arduino 5V
-├── GND (Ground) → Arduino GND  
-├── Trig (Trigger) → Arduino Pin 13
-└── Echo (Echo) → Arduino Pin 12
-```
-
-**3. Connect the I2C LCD Display**
-![LCD Display](assets/LCD_Display.png)
-```
-LCD I2C Connections:
-├── VCC (Power) → Arduino 5V
-├── GND (Ground) → Arduino GND
-├── SDA (Data) → Arduino A4
-└── SCL (Clock) → Arduino A5
-```
-
-**4. Connect Additional Components**
-```
-Push Button:
-├── Terminal 1 → Arduino Pin 2
-└── Terminal 2 → Arduino GND
-
-Buzzer:
-├── Positive (+) → Arduino Pin 8
-└── Negative (-) → Arduino GND
-```
-
-**5. Final Assembly Check**
-![Complete Setup](assets/Materials.png)
-- Verify all connections match the wiring diagram
-- Check for loose wires or incorrect connections
-- Ensure no short circuits between power and ground
 
 ### Software Installation
 1. Clone this repository:
@@ -244,8 +161,6 @@ Buzzer:
 - **Fail**: Number of failed intervals (max 2)
 - **Result**: Final score upon completion
 
-## 🏗️ System Architecture
-
 ### Test Logic Flow
 ```
 Start → Countdown → Round 1 → ... → Round 7 → Success
@@ -276,45 +191,8 @@ Pacer_System/
     └── 7864bdfb-91c2-44d7-b179-7c227cd5bad3.mp4 # Demo video
 ```
 
-## 🖼️ Assets Gallery
-
-The following visual assets are available in the `assets/` folder for documentation, wiring guidance, and project reference:
-
-### Component Images & Wiring Guides
-
-| Image | Path | Description | Usage Context |
-|-------|------|-------------|---------------|
-| ![Arduino](assets/Arduino_MC.png) | `assets/Arduino_MC.png` | **Arduino Microcontroller** - Main processing unit for the Pacer System | Used in Hardware Requirements and Installation sections for component identification |
-| ![LCD](assets/LCD_Display.png) | `assets/LCD_Display.png` | **16x2 I2C LCD Display** - Shows real-time feedback, countdown, and results | Referenced in wiring diagrams and component setup guides |
-| ![Sensor](assets/Ultrasonic_Sensor.png) | `assets/Ultrasonic_Sensor.png` | **HC-SR04 Ultrasonic Sensor** - Measures distance and detects participant movement | Essential for understanding sensor placement and wiring connections |
-| ![Materials](assets/Materials.png) | `assets/Materials.png` | **Complete Materials Overview** - All components needed for the project | Perfect for project planning and component verification |
-| ![Poster](assets/poster.png) | `assets/poster.png` | **Project Presentation Poster** - Visual summary of the Pacer System project | Ideal for presentations and project overviews |
-
 ### Additional Media
 - **Demo Video**: `7864bdfb-91c2-44d7-b179-7c227cd5bad3.mp4` - System operation demonstration
-
-### How These Images Enhance Documentation
-
-1. **Visual Learning**: Each component image helps users identify the correct parts
-2. **Wiring Guidance**: Images are strategically placed alongside connection instructions
-3. **Assembly Verification**: The materials overview helps verify complete component sets
-4. **Project Presentation**: The poster provides a professional project summary
-
-### Usage in Documentation
-Reference these images in your documentation using:
-```markdown
-![Arduino Microcontroller](assets/Arduino_MC.png)
-![LCD Display](assets/LCD_Display.png)
-![Materials Overview](assets/Materials.png)
-![Ultrasonic Sensor](assets/Ultrasonic_Sensor.png)
-![Project Poster](assets/poster.png)
-```
-
-### Image Integration Best Practices
-- Images are positioned alongside relevant textual instructions
-- Each image includes descriptive alt text for accessibility
-- Visual elements support step-by-step assembly processes
-- Component images aid in proper identification and wiring
 
 ## 🤝 Contributing
 
