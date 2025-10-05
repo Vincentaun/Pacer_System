@@ -7,17 +7,17 @@
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Hardware Requirements](#hardware-requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [System Architecture](#system-architecture)
-- [Project Structure](#project-structure)
-- [Assets Gallery](#assets-gallery)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Overview](#-overview)
+- [Features](#-features)
+- [Hardware Requirements](#-hardware-requirements)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [System Architecture](#-system-architecture)
+- [Project Structure](#-project-structure)
+- [Assets Gallery](#-assets-gallery)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Acknowledgments](#-acknowledgments)
 
 ## 🎯 Overview
 
